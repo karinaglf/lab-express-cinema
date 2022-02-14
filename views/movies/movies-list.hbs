@@ -1,0 +1,11 @@
+<h1>Movies List</h1>
+
+<div class="flex-row">
+{{#each moviesList}}
+    <div class="movie-card">
+        <img src='{{image}}' alt='' />
+        <p>{{title}}</p>
+        <p><a href='/movies/{{_id}}'>See details</a></p>
+    </div>
+{{/each}}
+</div>

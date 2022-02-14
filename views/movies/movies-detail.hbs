@@ -1,0 +1,26 @@
+{{#with foundedMovie}}
+<div class="flex-row">
+    <img src="{{ image }}" alt="">
+    <div class="movie-info">
+    <p>{{ title }}</p>
+    <p>{{ director }}</p>
+    <ul>
+      {{#each stars}}
+        <li>{{ this }}</li>
+      {{/each}}
+    </ul>
+
+    <p>{{ description }}</p>
+
+    <p>
+      {{#each showtimes}}
+        {{#if @last}} 
+          {{ this }} 
+        {{else}} 
+          {{ this }} | 
+        {{/if}}
+      {{/each}}
+    </p>
+    </div>
+</div>
+{{/with}}
